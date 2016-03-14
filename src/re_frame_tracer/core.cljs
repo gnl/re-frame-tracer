@@ -45,8 +45,7 @@
                              (when tag (str " " tag))
                              (when dispatch-val
                                (str " " (pr-str dispatch-val)))
-                             (str " " arglist)
-                             (when anonymous? " (anonymous)")))
+                             (str " " arglist)))
                 arglist (remove '#{&} arglist)]
             (.groupCollapsed js/console "%c%s" (str "color:" color ";") title)
             (.group js/console "bindings"))
